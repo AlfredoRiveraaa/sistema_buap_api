@@ -17,3 +17,15 @@ class AdminSerializer(serializers.ModelSerializer):
     class Meta:
         model = Administradores
         fields = '__all__'
+
+class AlumnoSerializer(serializers.ModelSerializer):
+    user=UserSerializer(read_only=True)
+    class Meta:
+        #model = Alumnos
+        fields = "__all__"
+
+class MaestroSerializer(serializers.ModelSerializer):
+    user=UserSerializer(read_only=True)
+    class Meta:
+        #model = Maestros
+        fields = '__all__'
